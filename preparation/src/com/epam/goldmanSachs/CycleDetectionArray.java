@@ -1,4 +1,4 @@
-package goldmanSachs;
+package com.epam.goldmanSachs;
 
 public class CycleDetectionArray {
     public static void main(String[] args) {
