@@ -1,0 +1,12 @@
+1. for loop with empty initialization and empty increment
+    for(;;){
+
+    }
+2. while loop without stopping condition
+    while(true){
+
+    }
+3. recursive call without base condition
+    inifiniteLoop(){
+        infiniteLoop();
+    }
