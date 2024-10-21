@@ -11,8 +11,9 @@ public class LongestAbsoluteFilePath {
         int maxLength = 0;
         for (String s : parts) {
             int lev = s.lastIndexOf("\t") + 1;
-            int curLen = stack[lev + 1] = stack[lev] + s.length() - lev + 1;
-            if (s.contains(".")){
+            stack[lev + 1] = stack[lev] + s.length() - lev + 1;
+            int curLen = stack[lev+1];
+            if (s.contains(".")){ // not a file
                 maxLength = Math.max(maxLength, curLen - 1);
             }
         }
