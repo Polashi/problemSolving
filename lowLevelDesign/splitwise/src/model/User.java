@@ -22,7 +22,7 @@ public class User {
         return email;
     }
 
-    public String getID() {
+    public Long getID() {
         return ID;
     }
 

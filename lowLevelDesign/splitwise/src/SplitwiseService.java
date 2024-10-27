@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class SplitwiseService {
     private static SplitwiseService instance;
-    private final Map<String, User> userMap;
+    private final Map<Long, User> userMap;
     private final Map<String, Group> groupMap;
 
     private SplitwiseService(){
