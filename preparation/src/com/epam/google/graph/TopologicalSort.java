@@ -1,6 +1,4 @@
-package com.epam.google;
-
-import java.util.ArrayList;
+package com.epam.google.graph;
 
 public class TopologicalSort {
     public static void main(String[] args) {

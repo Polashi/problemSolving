@@ -1,4 +1,4 @@
-package com.epam.google;
+package com.epam.google.graph;
 
 public class CycleUndirectedGraphBFS {
 }

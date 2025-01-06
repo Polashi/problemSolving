@@ -1,7 +1,6 @@
-package com.epam.google;
+package com.epam.google.dynamicPrograming;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 public class FruitIntoBasket {
     public static void main(String[] args) {

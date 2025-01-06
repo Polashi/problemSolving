@@ -1,4 +1,4 @@
-package com.epam.google;
+package com.epam.google.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,7 +40,7 @@ public class ShortestPathDirectedAcyclicGraph {
         while(!stack.isEmpty()){    // 5, 3, 0, 4, 2, 1||
             int node = stack.pop();
             for(int i=0; i<adj.get(node).size(); i++){
-                int v = adj.get(node).get(i).vertex;
+                int v = adj.get(node).get(i).node;
                 int w = adj.get(node).get(i).weight;
                 if(dist[node] + w < dist[v]){
                     dist[v] = w + dist[node];
@@ -59,20 +59,11 @@ public class ShortestPathDirectedAcyclicGraph {
     public void topologicalSort(int i, List<List<Pair>> adj, int[] vis, Stack<Integer> stack) {
         vis[i] = 1;
         for(Pair neighbour: adj.get(i)){
-            int v = neighbour.vertex;
+            int v = neighbour.node;
             if(vis[v] == 0){
                 topologicalSort(v, adj, vis, stack);
             }
         }
         stack.push(i);
-    }
-}
- class Pair{
-    int vertex;
-    int weight;
-
-    Pair(int v, int w){
-        this.vertex = v;
-        this.weight = w;
     }
 }
