@@ -2,7 +2,7 @@ package com.epam.google.graph;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
-
+//Applicable to graphs that can contain circles and Topological sort is not applicable to them
 public class DijkstraAlgo {
     public ArrayList<Integer> dijkstra(int V, ArrayList<ArrayList<Pair>> adj, int src) {
         PriorityQueue<Pair> minHeap = new PriorityQueue<Pair>((x,y) -> x.weight - y.weight);
