@@ -24,7 +24,7 @@ public class DisjointSet {
         }
         int ulp = findUltimateParent(parents.get(node));
         parents.set(node,ulp);
-        return parents.get(node);
+        return ulp;
     }
 
     public void unionByRank(int u, int v){

@@ -38,12 +38,13 @@ public class PathWithMinimumEffort {
         }
         return 0;
     }
-}
-class Tuple1{
-    int row, col, distance;
-    Tuple1(int row, int col, int distance){
-        this.row = row;
-        this.col = col;
-        this.distance = distance;
+    class Tuple1{
+        int row, col, distance;
+        Tuple1(int row, int col, int distance){
+            this.row = row;
+            this.col = col;
+            this.distance = distance;
+        }
     }
 }
+

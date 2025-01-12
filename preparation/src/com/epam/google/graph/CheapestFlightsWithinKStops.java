@@ -41,21 +41,22 @@ public class CheapestFlightsWithinKStops {
         }
         return dist[dst];
     }
-}
-class StopDestPrice{
-    int stop, dest, price;
-    StopDestPrice(int stop, int dest, int price){
-        this.stop = stop;
-        this.dest = dest;
-        this.price = price;
+    class StopDestPrice{
+        int stop, dest, price;
+        StopDestPrice(int stop, int dest, int price){
+            this.stop = stop;
+            this.dest = dest;
+            this.price = price;
+        }
+    }
+
+    class DestPrice{
+        int destination;
+        int price;
+        DestPrice(int d, int p){
+            destination = d;
+            price = p;
+        }
     }
 }
 
-class DestPrice{
-    int destination;
-    int price;
-    DestPrice(int d, int p){
-        destination = d;
-        price = p;
-    }
-}
