@@ -21,7 +21,7 @@ public class BookingService {
         bookingRecord = new HashMap<>();
     }
 
-    private static synchronized BookingService getInstance(){
+    public static synchronized BookingService getInstance(){
         if(instance == null){
             return new BookingService();
         }

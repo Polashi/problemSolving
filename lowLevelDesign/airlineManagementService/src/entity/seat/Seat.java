@@ -6,7 +6,7 @@ public class Seat {
     private final SeatType type;
     private SeatStatus status;
 
-    Seat(String number, SeatType type){
+    public Seat(String number, SeatType type){
         this.number = number;
         this.type = type;
         this.status = SeatStatus.AVAILABLE;

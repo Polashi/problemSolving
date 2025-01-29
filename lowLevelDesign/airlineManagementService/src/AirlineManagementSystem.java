@@ -9,6 +9,7 @@ import service.booking.BookingService;
 import service.payment.PaymentService;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AirlineManagementSystem {
@@ -18,12 +19,12 @@ public class AirlineManagementSystem {
     private final BookingService bookingService;
     private final PaymentService paymentService;
 
-    public AirlineManagementSystem(List<Flight> flightList, List<Aircraft> aircraftList, FlightService flightService, BookingService bookingService, PaymentService paymentService) {
-        this.flightList = flightList;
-        this.aircraftList = aircraftList;
-        this.flightService = flightService;
-        this.bookingService = bookingService;
-        this.paymentService = paymentService;
+    public AirlineManagementSystem() {
+        this.flightList = new ArrayList<>();
+        this.aircraftList = new ArrayList<>();
+        this.flightService = new FlightService(flightList);
+        this.bookingService = BookingService.getInstance();
+        this.paymentService = PaymentService.getInstance();
     }
 
     public void addFlight(Flight flight){
