@@ -1,11 +1,11 @@
-package com.epam.google.graph;
+package com.epam.samsung;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class CycleUndirectedGraphBFS {
+public class CycleUndirectedGraph {
     public static boolean detectCycle(int V, ArrayList<ArrayList<Integer>> adjList) {
         boolean[] vis = new boolean[V];
         int[] parent = new int[V];

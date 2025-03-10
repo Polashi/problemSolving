@@ -25,14 +25,14 @@ public class CycleUndirectedGraphDFS {
 
     private static boolean dfs(int u, int parent, int[][] adj, boolean[] vis){
         vis[u] = false;
-        for(int v: adj[u]){
-            if(v == parent) {
+        for(int next: adj[u]){
+            if(next == parent) {
                 continue;
             }
-            if(vis[v]){
+            if(vis[next]){
                 return true;
             }
-            if(dfs(v, u, adj, vis)){
+            if(dfs(next, u, adj, vis)){
                 return true;
             }
         }
