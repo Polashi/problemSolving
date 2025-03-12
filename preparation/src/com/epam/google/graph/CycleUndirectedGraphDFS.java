@@ -14,8 +14,7 @@ public class CycleUndirectedGraphDFS {
         Arrays.fill(visited, false);
         for(int i=0; i<v; i++){
             if(!visited[i]){
-                boolean isPresent = dfs(i, -1, adj, visited);
-                if(isPresent){
+                if( dfs(i, -1, adj, visited)){
                     return true;
                 }
             }
@@ -23,16 +22,13 @@ public class CycleUndirectedGraphDFS {
         return false;
     }
 
-    private static boolean dfs(int u, int parent, int[][] adj, boolean[] vis){
-        vis[u] = false;
-        for(int next: adj[u]){
+    private static boolean dfs(int node, int parent, int[][] adjList, boolean[] visited){
+        visited[node] = false;
+        for(int next: adjList[node]){
             if(next == parent) {
                 continue;
             }
-            if(vis[next]){
-                return true;
-            }
-            if(dfs(next, u, adj, vis)){
+            if(visited[next] || dfs(next, node, adjList, visited)){
                 return true;
             }
         }
