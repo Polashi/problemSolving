@@ -19,13 +19,6 @@ public class BipartiteGraph {
                 adj.get(i).add(graph[i][j]);
             }
         }
-        // ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        // for (int i = 0; i < n; i++) {
-        // adj.add(new ArrayList<>());
-        // for (int neighbor : graph[i]) {
-        // adj.get(i).add(neighbor);
-        // }
-        // }
 
         int[] color = new int[n];
         Arrays.fill(color, -1);
